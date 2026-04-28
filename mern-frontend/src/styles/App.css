@@ -1,0 +1,36 @@
+.App { display: flex; flex-direction: column; min-height: 100vh; }
+
+.navbar {
+  display: flex; align-items: center; justify-content: space-between;
+  background: #1a1a2e; color: #fff; padding: 0 2rem; height: 60px;
+}
+.navbar-brand a { color: #e94560; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
+.navbar-links { display: flex; list-style: none; gap: 1.5rem; }
+.navbar-links a { color: #ccc; text-decoration: none; transition: color 0.2s; }
+.navbar-links a:hover, .navbar-links a.active { color: #e94560; }
+.hamburger { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
+
+.main-content { flex: 1; padding: 2rem; max-width: 1200px; margin: 0 auto; width: 100%; }
+
+.page { padding: 2rem 0; }
+.page h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #1a1a2e; }
+.page p { color: #666; font-size: 1.1rem; margin-bottom: 1rem; }
+.page ul { padding-left: 1.5rem; color: #666; line-height: 2; }
+
+.status-card {
+  background: #fff; border: 1px solid #e0e0e0; border-radius: 8px;
+  padding: 1.5rem; margin-top: 2rem; max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.status-card h3 { color: #1a1a2e; margin-bottom: 0.5rem; }
+
+.not-found-page { text-align: center; padding: 4rem 0; }
+.not-found-page h1 { font-size: 6rem; color: #e94560; }
+.not-found-page a { color: #e94560; text-decoration: none; font-weight: 600; }
+
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+  .navbar-links { display: none; flex-direction: column; position: absolute;
+    top: 60px; left: 0; right: 0; background: #1a1a2e; padding: 1rem 2rem; }
+  .navbar-links.open { display: flex; }
+}
